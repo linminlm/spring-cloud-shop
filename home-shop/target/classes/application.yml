@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: home-shop
+server:
+  port: 8330
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8111/eureka/
