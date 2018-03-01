@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/commons/commons.iml" filepath="$PROJECT_DIR$/commons/commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/home-shop/home-shop.iml" filepath="$PROJECT_DIR$/home-shop/home-shop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/moudle/moudle.iml" filepath="$PROJECT_DIR$/moudle/moudle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pubUser-service/pubUser-service.iml" filepath="$PROJECT_DIR$/pubUser-service/pubUser-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/static/static.iml" filepath="$PROJECT_DIR$/static/static.iml" />
+    </modules>
+  </component>
+</project>
