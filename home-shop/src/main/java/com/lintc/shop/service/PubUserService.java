@@ -25,9 +25,9 @@ public class PubUserService {
     public PubUser getPubUser(Long id) {
         return restTemplate.getForEntity("http://PUBUSER-SERVICE/pubUser/" + id, PubUser.class).getBody();
     }
-    private PubUser getCategoryFallback(Long id) {
+    private PubUser getPubUserFallback(Long id) {
         // throw new ServiceUnAvailableException("CATEGORY-SERVICE");
         logger.error("PUBUSER-SERVICE unavailable");
-        return new PubUser();
+        return null;
     }
 }
