@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @公司：汽车易生活
  */
 @RestController
-@RequestMapping("/")
+@RequestMapping("/user")
 public class HomeController {
     @Autowired
     private PubUserService pubUserService;
