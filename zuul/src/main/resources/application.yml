@@ -8,4 +8,7 @@ eureka:
     service-url:
       defaultZone: http://localhost:8111/eureka/
 
+zuul:
+  routes:
+    home-shop: /user/**
 

@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /**
  * @项目：testCloud
  * @创建者：linmin
@@ -36,5 +38,13 @@ public class PubUserController {
         PubUser category = pubUserService.getOneById(id);
         logger.info("/pubUser/id, host:" + instance.getHost() + ", serviceId: " + instance.getServiceId() + ",PubUser id: " + category.getId() + ",PubUser email: " + category.getEmail());
         return category;
+    }
+
+    @RequestMapping(value = "/list", method = RequestMethod.GET, produces = "application/json")
+    public List<PubUser> getAll(){
+        ServiceInstance instance = discoveryClient.getLocalServiceInstance();
+        List<PubUser> list = pubUserService.getAll();
+        logger.info("/pubUser/list, host:" + instance.getHost() + ", serviceId: " + instance.getServiceId() );
+        return list;
     }
 }

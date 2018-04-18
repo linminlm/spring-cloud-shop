@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.List;
+
 /**
  * @项目：testCloud
  * @创建者：linmin
@@ -24,6 +26,10 @@ public class PubUserService {
     @HystrixCommand(fallbackMethod = "getPubUserFallback")
     public PubUser getPubUser(Long id) {
         return restTemplate.getForEntity("http://PUBUSER-SERVICE/pubUser/" + id, PubUser.class).getBody();
+    }
+
+    public List<PubUser> getPubUserList(){
+        return restTemplate.getForEntity("http://PUBUSER-SERVICE/pubUser/list",List.class).getBody();
     }
     private PubUser getPubUserFallback(Long id) {
         // throw new ServiceUnAvailableException("CATEGORY-SERVICE");

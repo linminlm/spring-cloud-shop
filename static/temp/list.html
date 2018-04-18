@@ -4,17 +4,28 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="../js/jquery.js"></script>
+    <script src="../js/vue.min.js"></script>
 </head>
 <body>
     hello
 </body>
-<script>
+
+<script type="text/javascript">
+
     $(function(){
         $.ajax({
             url:"http://localhost:8440/user/1",
             type:"get",
             success:function(json){
                 console.log(json);
+//                var vm = new Vue({
+//                    el: '#vue_det',
+//                    data: {
+//                        code: json.code,
+//                        name: json.data.nickName,
+//                        email: json.data.email
+//                    }
+//                })
             }
         })
     })
